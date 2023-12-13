@@ -27,10 +27,6 @@ Steep learning curve: While Flask is easy to learn and use for small projects, i
 No built-in support for database integration: Flask API does not provide built-in support for database integration. Developers need to use third-party libraries like SQLAlchemy to integrate databases with their APIs.
 Security vulnerabilities: As with any web framework, Flask API can be vulnerable to security threats like SQL injection or cross-site scripting attacks. Developers need to be aware of these vulnerabilities and take steps to secure their APIs.
 
-### Postgres 
-
-- https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/#install-requirements
-
 ### Upload
 
 curl -X POST -F cityname=athens -F file=@weather-athens.csv localhost:8088/upload

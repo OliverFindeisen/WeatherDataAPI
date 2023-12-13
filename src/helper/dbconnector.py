@@ -75,6 +75,8 @@ class DbConnector:
         except Exception as e:
             return {"success": False, "message": e}
         finally:
+            cur.close()
+            self.close(self)
             return result
 
     def getdayswithrainmounth(self, cityname, month):
@@ -100,6 +102,8 @@ class DbConnector:
         except Exception as e:
             result = {"success": False, "message": e}
         finally:
+            cur.close()
+            self.close(self)
             return result
 
     def getlasttimerainedindaysbynameanddate(self, cityname, datestring):
@@ -129,6 +133,8 @@ class DbConnector:
             result = {"success": False, "message": e}
 
         finally:
+            cur.close()
+            self.close(self)
             return result
 
     def getsnowrainheatbycityandyear(self, cityname, year):
@@ -150,6 +156,8 @@ class DbConnector:
         except Exception as e:
             result = {"success": False, "message": e}
         finally:
+            cur.close()
+            self.close(self)
             return result
 
     # we don't need to close the connection here as we do it in the caller

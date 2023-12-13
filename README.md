@@ -83,5 +83,5 @@ these values can be applied via scripts/setEnv.sh
 
 - A: curl -s "localhost:8088/endpointa?cityname=berlin&datestring=2021-12-14"
 - B: curl -s "localhost:8088/endpointb?cityname=athens&month=10"
-- C: curl -s "localhost:8088/endpointc?cityname=berlin&datestring=2021-12-14"
+- C: curl -s "localhost:8088/endpointc?cityname=berlin&datestring=2021-10-13"
 - D: curl -s "localhost:8088/endpointd?cityname=athens&year=2015"
