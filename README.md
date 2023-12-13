@@ -78,8 +78,11 @@ these values can be applied via `source scripts/setEnv.sh`
 
 - `curl -X POST -F cityname=athens -F file=@resources/weather-athens.csv localhost:8088/upload`
 - `curl -X POST -F cityname=berlin -F file=@resources/weather-berlin.csv localhost:8088/upload`
+### Endpoint Requests Auto
 
-### Endpoint Requests 
+- `./scripts/runTest.sh`
+
+### Endpoint Requests example
 
 - A: curl -s "localhost:8088/endpointa?cityname=berlin&datestring=2021-12-14" | jq .
 - B: curl -s "localhost:8088/endpointb?cityname=athens&month=10" | jq .
