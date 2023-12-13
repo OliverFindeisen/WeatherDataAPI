@@ -66,7 +66,7 @@ Private repository access with e.g. id_rsa.pub
 - `export DB_PASSWORD=test` # pg password
 - `export DB_TABLE_RESET=false` # resets tables (true/false)
 
-these values can be applied via scripts/setEnv.sh
+these values can be applied via `source scripts/setEnv.sh`
 
 ## Start
 
@@ -81,7 +81,7 @@ these values can be applied via scripts/setEnv.sh
 
 ### Endpoint Requests 
 
-- A: curl -s "localhost:8088/endpointa?cityname=berlin&datestring=2021-12-14"
-- B: curl -s "localhost:8088/endpointb?cityname=athens&month=10"
-- C: curl -s "localhost:8088/endpointc?cityname=berlin&datestring=2021-10-13"
-- D: curl -s "localhost:8088/endpointd?cityname=athens&year=2015"
+- A: curl -s "localhost:8088/endpointa?cityname=berlin&datestring=2021-12-14" | jq .
+- B: curl -s "localhost:8088/endpointb?cityname=athens&month=10" | jq .
+- C: curl -s "localhost:8088/endpointc?cityname=berlin&datestring=2021-10-13" | jq .
+- D: curl -s "localhost:8088/endpointd?cityname=athens&year=2015" | jq .
