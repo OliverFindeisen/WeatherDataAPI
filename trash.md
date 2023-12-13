@@ -1,9 +1,3 @@
-python3 -m venv weather
-source venv/bin/activate
-pip install flask psycopg2-binary
-
-
-
 ### Flask 
 
 Flask has a built-in development server and a fast debugger.
