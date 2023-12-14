@@ -52,7 +52,7 @@ Private repository access with e.g. id_rsa.pub
 - `mkdir <some/folder>`
 - `cd <some/folder>`
 - `git clone git@github.com:OliverFindeisen/WeatherDataAPI.git`
-- `git checkout development`
+- `git checkout master`
 - `python3 -m venv api`
 - `source api/bin/activate`
 - `pip install -r requirements.txt`
@@ -88,3 +88,23 @@ these values can be applied via `source scripts/setEnv.sh`
 - B: curl -s "localhost:8088/endpointb?cityname=athens&month=10" | jq .
 - C: curl -s "localhost:8088/endpointc?cityname=berlin&datestring=2021-10-13" | jq .
 - D: curl -s "localhost:8088/endpointd?cityname=athens&year=2015" | jq .
+
+## Necessary improvements
+
+- Project structure e.g. run able just with `phyton command`
+- Add a proxy like Nginx to:
+  - Secure connection with certificates
+  - Load balancing with e.g. multiple backends
+- Add logging, atm errors will be printed as "results"
+- Improve Fail save for imports
+  - async import e.g. buffer files (if size allow) and process  
+  - broken csv (Proces by line a.t.m a failed line brake the whole import)
+  - duplicate uploads (e.g. constrain by city and datetime)
+  - plausibility checks like temperatures above a threshold value and so on
+- Improve Request args a.t.m. there is no check for type and the value itself
+- Adjust flask to productive it is atm set in Development mode with Debug and so on
+- Buffer sub values / Query's to improve performance when the data reach big amounts
+- Think about a NOSQL solution for raw data handling
+- Config via file hold in separate repository which might be necessary if the application reach a bigger complexity and there might be multiple installations with different config needs
+- Add Frontend
+- Add e.g. Swagger as endpoint description
