@@ -80,6 +80,8 @@ these values can be applied via `source scripts/setEnv.sh`
 
 - `curl -X POST -F cityname=athens -F file=@resources/weather-athens.csv localhost:8088/upload`
 - `curl -X POST -F cityname=berlin -F file=@resources/weather-berlin.csv localhost:8088/upload`
+
+or run `./scripts/import.sh`
 ### Endpoint Requests Auto
 
 - `./scripts/runTest.sh`
