@@ -39,12 +39,14 @@ Anything else that you consider important.
 Script output are formated with jq
 `sudo apt-get install jq`
 
-- GIT
-Private repository access with e.g. id_rsa.pub
-
+- GIT https://github.com/OliverFindeisen/WeatherDataAPI
 - POSTGRES
-- database/user/password set see ENV below
-- pg.hba configured for local
+  - database created
+  - user created
+  - password set
+  - user have access to the database 
+  - see/set ENV below
+  - pg.hba  configured for local
 
 
 ## Install 
